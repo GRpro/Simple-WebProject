@@ -12,6 +12,6 @@ Project's data model consists of two entities Shop and Item. One shop can have m
 Database script you can find in /res/shop_service_db_script
 
 To run project - deploy it in some container. Then go to
-http://<host>:<port>/WebProject
+http://host:port/WebProject
 
 
