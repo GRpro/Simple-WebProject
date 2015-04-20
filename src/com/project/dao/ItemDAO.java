@@ -55,6 +55,7 @@ public class ItemDAO implements CRUD<Item>{
 				e1.printStackTrace();
 			}
 			e.printStackTrace();
+			throw new OperationFailedException();
 		} finally {
 			if (statement != null) {
 				try {
@@ -119,9 +120,9 @@ public class ItemDAO implements CRUD<Item>{
 				connection.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
-				throw new OperationFailedException();
 			}
 			e.printStackTrace();
+			throw new OperationFailedException();
 		} finally {
 			if (statement != null) {
 				try {
@@ -145,9 +146,9 @@ public class ItemDAO implements CRUD<Item>{
 				connection.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
-				throw new OperationFailedException();
 			}
 			e.printStackTrace();
+			throw new OperationFailedException();
 		} finally {
 			if (statement != null) {
 				try {

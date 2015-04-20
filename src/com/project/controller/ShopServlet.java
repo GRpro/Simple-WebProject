@@ -64,7 +64,7 @@ public class ShopServlet extends HttpServlet {
 			long shopId;
 			shopId = shopDAO.create(shop);
 			shop.setId(shopId);
-			System.out.println("New shop was created: " + shop);
+//			System.out.println("New shop was created: " + shop);
 			request.setAttribute("title", "Success page");
 			request.setAttribute("message", "New shop was successfully created!");
 		} catch (Exception e) {

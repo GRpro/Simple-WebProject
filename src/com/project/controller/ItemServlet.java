@@ -23,15 +23,12 @@ public class ItemServlet extends HttpServlet {
        
 	private ItemDAO itemDAO;
 	
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public ItemServlet() {
         this.itemDAO = ItemDAO.getInstance();
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * Returns list of items related to particular shop
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {

@@ -32,8 +32,6 @@ public class ShopDAO implements CRUD<Shop>{
 		return shopDAO;
 	}
 
-
-	@SuppressWarnings("finally")
 	@Override
 	public long create(Shop object) throws OperationFailedException {
 		PreparedStatement statement = null;
@@ -58,9 +56,8 @@ public class ShopDAO implements CRUD<Shop>{
 				connection.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
-			} finally {
-				throw new OperationFailedException();
-			}
+			} 
+			throw new OperationFailedException();
 		} finally {
 			if (statement != null) {
 				try {
@@ -128,9 +125,9 @@ public class ShopDAO implements CRUD<Shop>{
 				connection.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
-				throw new OperationFailedException();
 			}
 			e.printStackTrace();
+			throw new OperationFailedException();
 		} finally {
 			if (statement != null) {
 				try {
